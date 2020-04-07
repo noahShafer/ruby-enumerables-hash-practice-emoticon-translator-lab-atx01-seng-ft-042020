@@ -10,8 +10,10 @@ def load_library(path)
   end
 end
 
-def get_japanese_emoticon
-  
+def get_japanese_emoticon(path, emoticon)
+  emoticons = load_library(path)
+  res = ""
+  emoticons.each {|e| }
 end
 
 def get_english_meaning
