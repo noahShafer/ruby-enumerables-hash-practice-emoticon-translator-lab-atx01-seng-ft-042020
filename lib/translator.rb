@@ -2,7 +2,7 @@
 require 'yaml'
 
 def load_library
-  file = YAML.load_file('emoticons.yml')
+  file = YAML.load_file('lib/moticons.yml')
   file.reduce({}) do |memo, (key, value)| 
     memo[key] = {}
     value.each_with_index {|e, i| i == 0 ? memo[key][:english] = e : memo[key][:japanese] = e }
