@@ -12,9 +12,11 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   emoticons = load_library(path)
+  res = ""
   emoticons.each {|pair| 
-    pair[1][:english] == emoticon ? return pair[1][:japanese] : ""
+    pair[1][:english] == emoticon ? res = pair[1][:japanese] : ""
   }
+  res
 end
 
 def get_english_meaning
