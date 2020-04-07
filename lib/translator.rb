@@ -13,7 +13,7 @@ end
 def get_japanese_emoticon(path, emoticon)
   emoticons = load_library(path)
   emoticons.each {|pair| 
-    pair
+    pair[1][:english] == emoticon ? return pair[1][:japanese] : nil
   }
 end
 
