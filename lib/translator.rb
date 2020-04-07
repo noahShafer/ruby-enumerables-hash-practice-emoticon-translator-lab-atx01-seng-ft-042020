@@ -20,7 +20,7 @@ def get_japanese_emoticon(path, emoticon)
   if res != ""
     return res
   else
-    return "Sorry, not a known emoticon"
+    return "Sorry, that emoticon was not found"
   end
 end
 
