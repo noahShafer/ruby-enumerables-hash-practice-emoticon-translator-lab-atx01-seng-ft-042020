@@ -17,7 +17,11 @@ def get_japanese_emoticon(path, emoticon)
     res = pair[1][:japanese] if pair[1][:english] == emoticon
     break if res != ""
   }
-  if res 
+  if res != ""
+    return res
+  else
+    return "Sorry, not a known emoticon"
+  end
 end
 
 def get_english_meaning
