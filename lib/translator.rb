@@ -29,7 +29,7 @@ def get_english_meaning(path, emoticon)
   emoticons = load_library(path)
   res = ""
   emoticons.each {|pair| 
-    res = pair[1][:english] if pair[1][:japanese] == emoticon
+    res = pair[0] if pair[1][:japanese] == emoticon
     break if res != ""
   }
   if res != ""
