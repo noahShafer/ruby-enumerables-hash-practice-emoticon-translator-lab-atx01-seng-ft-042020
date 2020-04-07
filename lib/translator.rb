@@ -26,6 +26,17 @@ end
 
 def get_english_meaning
   # code goes here
+  emoticons = load_library(path)
+  res = ""
+  emoticons.each {|pair| 
+    res = pair[1][:english] if pair[1][:japanese] == emoticon
+    break if res != ""
+  }
+  if res != ""
+    return res
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
 # p load_library
 # p get_japanese_emoticon("emoticons.yml", ":)")
